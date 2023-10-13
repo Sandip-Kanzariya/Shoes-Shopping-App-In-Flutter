@@ -16,15 +16,18 @@ class AuthRouter extends StatelessWidget {
           if (snapshot.connectionState == ConnectionState.waiting) {
             // Show a loading indicator while checking the authentication state
             return const CircularProgressIndicator();
-          } else {
-            if (snapshot.hasData) {
-              // User is logged in, navigate to the home page
-              return HomePage();
-            } else {
-              // User is not logged in, navigate to the login page
-              return LoginPage();
-            }
-          }
+          } 
+          // else {
+          //   if (snapshot.hasData) {
+          //     // User is logged in, navigate to the home page
+          //   } else {
+          //     // User is not logged in, navigate to the login page
+          //     return HomePage();
+          //   }
+          // }
+          
+          return LoginPage();
+
         },
       ), // StreamBuilder
     ); // Scaffold
