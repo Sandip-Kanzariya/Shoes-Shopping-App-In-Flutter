@@ -1,16 +1,18 @@
 # Shoes-Shopping-App-In-Flutter
 
+> clone this repo
+```
+git clone https://github.com/Sandip-Kanzariya/Shoes-Shopping-App-In-Flutter.git
+```
+> [Folow this to connect firebase ](https://firebase.google.com/docs/flutter/setup?platform=ios)
+
+
+#### Get all dependencies by running this command
 ```
 flutter pub get 
 ```
-### File Structure 
 
 
-> Team 
 
-<center>
-<a href="https://github.com/Sandip-Kanzariya/Shoes-Shopping-App-In-Flutter
-/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=Sandip-Kanzariya/Shoes-Shopping-App-In-Flutter" />
-</a>
-</center>
+
+
