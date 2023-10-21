@@ -1,12 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter_firebase/AuthRouter.dart';
-import 'package:flutter_firebase/pages/home_page.dart';
 import 'firebase_options.dart';
 import 'package:flutter_firebase/providers/cart_provider.dart';
-import 'package:flutter_firebase/pages/cart_page.dart';
 import 'package:provider/provider.dart';
-import 'package:flutter_firebase/LoginPage.dart';
 void main() async {
   //
   WidgetsFlutterBinding.ensureInitialized();

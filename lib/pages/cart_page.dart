@@ -74,13 +74,36 @@ class CartPage extends StatelessWidget {
                 color: Colors.red,
               ),
             ),
-            title: Text(
-              cartItem['title'].toString(),
-              style: Theme.of(context).textTheme.bodySmall,
+            title: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  cartItem['title'].toString(),
+                  style: Theme.of(context).textTheme.bodySmall,
+                ),
+                Text(
+                  'Price: ${cartItem['price']}',
+                  style: Theme.of(context).textTheme.bodySmall,
+                ),
+              ],
             ),
             subtitle: Text('Size: ${cartItem['size']}'),
           );
         },
+      ),
+      bottomNavigationBar: ElevatedButton(
+        onPressed: () {
+          //
+          cart.clear();
+        },
+        style: ElevatedButton.styleFrom(
+          primary: Colors.black, // Background color
+          textStyle: TextStyle(
+            color: Colors.white, // Text color
+            fontWeight: FontWeight.bold,
+          ),
+        ),
+        child: Text('Check Out'),
       ),
     );
   }

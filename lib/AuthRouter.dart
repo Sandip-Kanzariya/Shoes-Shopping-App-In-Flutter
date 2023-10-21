@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 
 import 'package:flutter_firebase/LoginPage.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:flutter_firebase/HomePage.dart';
 
 class AuthRouter extends StatelessWidget {
   const AuthRouter({Key? key});
@@ -16,7 +15,7 @@ class AuthRouter extends StatelessWidget {
           if (snapshot.connectionState == ConnectionState.waiting) {
             // Show a loading indicator while checking the authentication state
             return const CircularProgressIndicator();
-          } 
+          }
           // else {
           //   if (snapshot.hasData) {
           //     // User is logged in, navigate to the home page
@@ -25,9 +24,8 @@ class AuthRouter extends StatelessWidget {
           //     return HomePage();
           //   }
           // }
-          
-          return LoginPage();
 
+          return LoginPage();
         },
       ), // StreamBuilder
     ); // Scaffold

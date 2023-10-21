@@ -42,36 +42,24 @@ class _ProductListState extends State<ProductList> {
               Padding(
                 padding: const EdgeInsets.all(20.0),
                 child: Text(
-                  'Shoes\n Shop',
+                  'Shoes Shop',
                   style: Theme.of(context).textTheme.titleLarge,
                 ),
               ),
-
-              const Expanded(
-                child: TextField(
-                  decoration: InputDecoration(
-                    hintText: 'Search',
-                    prefixIcon: Icon(Icons.search),
-                    border: border,
-                    enabledBorder: border,
-                    focusedBorder: border,
-                  ),
-                ),
-              ),
               ElevatedButton(
-              onPressed: () async {
-                // Logout
-                await FirebaseAuth.instance.signOut();
+                onPressed: () async {
+                  // Logout
+                  await FirebaseAuth.instance.signOut();
 
-                {
-                  Navigator.pushReplacement(
-                    context,
-                    MaterialPageRoute(builder: (context) => LoginPage()),
-                  );
-                }
-              },
-              child: Text('Log Out'),
-            ),
+                  {
+                    Navigator.pushReplacement(
+                      context,
+                      MaterialPageRoute(builder: (context) => LoginPage()),
+                    );
+                  }
+                },
+                child: Text('Log Out'),
+              ),
             ],
           ),
           SizedBox(
