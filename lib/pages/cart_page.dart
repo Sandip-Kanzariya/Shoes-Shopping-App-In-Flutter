@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_firebase/pages/home_page.dart';
 import 'package:provider/provider.dart';
 import 'package:flutter_firebase/providers/cart_provider.dart';
 
@@ -93,7 +94,17 @@ class CartPage extends StatelessWidget {
       ),
       bottomNavigationBar: ElevatedButton(
         onPressed: () {
-          //
+          ScaffoldMessenger.of(context).showSnackBar(
+            SnackBar(
+              content: Text('Your order has been placed.'),
+            ),
+          );
+
+          Navigator.pushReplacement(
+            context,
+            MaterialPageRoute(builder: (context) => HomePage()),
+          );
+          // Clear the cart
           cart.clear();
         },
         style: ElevatedButton.styleFrom(
